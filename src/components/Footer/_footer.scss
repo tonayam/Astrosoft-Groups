@@ -1,7 +1,7 @@
 // MAIN FOOTER
 .footer {
     padding: 3rem 14px;
-    background-color: #1a1a1a;
+    background-color: $subBgColor;
 
     .btn {
         @include flex(center, center, row);
@@ -86,7 +86,7 @@
     padding: 3rem 14px;
     @include flex(center, space-between, column);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    background-color: #1a1a1a;
+    background-color: $subBgColor;
     color: $defaultTextColor;
     font-weight: 600;
 
@@ -104,7 +104,7 @@
 
     // MINI FOOTER
     .mini-footer {
-        padding: 1rem 24px;
+        padding: 3rem 24px;
     }
 }
 
@@ -131,7 +131,7 @@
 
     // MINI FOOTER
     .mini-footer {
-        padding: 1rem 40px;
+        padding: 3rem 40px;
         @include flex(center, space-between, row);
 
         .logo {
@@ -149,7 +149,7 @@
 
     // MINI FOOTER
     .mini-footer {
-        padding: 1rem 60px;
+        padding: 3rem 60px;
     }
 }
 
@@ -157,7 +157,7 @@
 
     // MAIN FOOTER
     .footer {
-        padding: 3rem 115px;
+        padding: 8rem 115px;
 
         .btn {
             h2 {
@@ -199,7 +199,7 @@
 
     // MAIN FOOTER
     .footer {
-        padding: 3rem 675px;
+        padding: 8rem 675px;
     }
 
     // MINI FOOTER

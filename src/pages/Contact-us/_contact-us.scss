@@ -1,0 +1,229 @@
+.contact-us-page {
+    header {
+        background-color: $subBgColor;
+        padding: 10rem 14px;
+        @include flex(center, space-between, column);
+
+        .left {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            ul {
+                list-style: disc;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+
+                li {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                font-weight: 600;
+                @include flex(flex-start, center, column);
+            }
+        }
+
+        .right {
+            width: 100%;
+        }
+    }
+
+    .form-section {
+        padding: 10rem 14px;
+        background-color: $bgColor;
+        position: relative;
+        @include flex(flex-start, space-between, column);
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            width: 80vw;
+            height: 80vw;
+            border: 200px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: -15vw;
+            right: -100vw;
+            opacity: .01;
+            pointer-events: none;
+        }
+
+
+        .info {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            button {
+                margin-bottom: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                @include flex(flex-start, flex-start, column);
+                margin-bottom: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                margin: 2rem 0;
+            }
+
+            .socials {
+                @include flex(center, space-between, row);
+                width: 100%;
+                font-size: 0.8rem;
+            }
+        }
+
+        .form {
+            width: 100%;
+
+            form {
+                .form-control {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    .contact-us-page {
+        header {
+            padding: 10rem 24px;
+        }
+
+        .form-section {
+            padding: 10rem 24px;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .contact-us-page {
+        header {
+            padding: 10rem 40px;
+
+            .left {
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .form-section {
+            padding: 10rem 40px;
+
+            .info {
+                margin-bottom: 4rem;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+                .socials {
+                    width: 50%;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    .contact-us-page {
+        header {
+            padding: 10rem 60px;
+        }
+
+        .form-section {
+            padding: 10rem 60px;
+        }
+    }
+}
+
+@include for-desktop-up {
+    .contact-us-page {
+        header {
+            padding: 10rem 115px;
+            @include flex(center, space-between, row);
+
+            .left {
+                width: 50%;
+                margin-right: 3rem;
+                margin-bottom: 0;
+
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+
+            .right {
+                width: 40%;
+            }
+        }
+
+        .form-section {
+            padding: 10rem 115px;
+            @include flex(center, space-between, row);
+
+            &::after {
+                right: -60vw;
+            }
+
+            .info {
+                width: 40%;
+                margin-bottom: 0;
+
+                h2 {
+                    font-size: 2.5rem;
+                }
+
+                h3 {
+                    font-size: 2rem;
+                }
+
+                .socials {
+                    width: 80%;
+                    font-size: 1rem;
+                }
+            }
+
+            .form {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .contact-us-page {
+        header {
+            padding: 10rem 675px;
+        }
+
+        .form-section {
+            padding: 10rem 675px;
+        }
+    }
+}
