@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar.jsx';
-import Footer from './components/Footer/Footer.jsx';
+import { Footer, MiniFooter } from './components/Footer/Footer.jsx';
 
 // PAGES WITHOUT AUTH
 import { About, ContactUs, Home, OurTeam, Services } from './pages';
@@ -26,6 +26,7 @@ function App() {
         <Route path='/contact-us' element={<ContactUs />} />
       </Routes>
       <Footer />
+      <MiniFooter />
     </>
   );
 }

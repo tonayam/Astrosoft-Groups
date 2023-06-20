@@ -4,12 +4,6 @@
     background: $bgColor;
     color: $defaultTextColor;
 
-    .logo {
-        width: 100px;
-        height: 50px;
-        border: 2px solid red;
-    }
-
     .links {
         @include flex(flex-start, flex-start, column);
         position: absolute;
@@ -146,4 +140,8 @@
     }
 }
 
-@include for-big-desktop-up {}
+@include for-big-desktop-up {
+    .navbar {
+        padding: 0.5rem 675px;
+    }
+}

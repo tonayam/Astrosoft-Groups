@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link to='services'>Services</Link>
         </li>
         <li onClick={closeNav}>
-          <Link to='our-team'> OurTeam</Link>
+          <Link to='our-team'> Our Team</Link>
         </li>
         <li onClick={closeNav}>
           <Link to='contact-us'>Contact</Link>
