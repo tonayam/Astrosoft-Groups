@@ -107,8 +107,8 @@
                 .text {
                     width: 100%;
                     height: 60%;
-                    @include flex(flex-start, center, column);
-                    padding: 0 14px;
+                    @include flex(flex-start, flex-start, column);
+                    padding: 2rem 14px;
 
                     h5 {
                         margin-bottom: 0.5rem;
@@ -165,7 +165,7 @@
             .wrapper {
                 .sub {
                     .text {
-                        padding: 0 24px;
+                        padding: 2rem 24px;
                     }
                 }
             }
@@ -222,6 +222,8 @@
                         width: 100%;
                         height: 50%;
                         padding: 0 40px;
+
+                        @include flex(flex-start, center, column);
 
                         h2 {
                             font-size: 3.5rem;
