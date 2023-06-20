@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
+import Navbar from './components/Navbar/Navbar.jsx';
+import Footer from './components/Footer/Footer.jsx';
+
 // PAGES WITHOUT AUTH
 import { About, ContactUs, Home, OurTeam, Services } from './pages';
 
@@ -14,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -21,6 +25,7 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/contact-us' element={<ContactUs />} />
       </Routes>
+      <Footer />
     </>
   );
 }

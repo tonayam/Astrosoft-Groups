@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
+  const [showNav, setShowNav] = useState(false);
+
+  return (
+    <AppContext.Provider value={{ showNav, setShowNav }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 const useGlobalContext = () => {
