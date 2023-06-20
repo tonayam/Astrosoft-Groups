@@ -27,6 +27,7 @@ body {
     font-family: 'Sora', sans-serif;
     font-weight: 400;
     color: $defaultTextColor;
+    background-color: $subBgColor;
 }
 
 a {
@@ -41,6 +42,13 @@ p {
     color: #ddd;
 }
 
+
+span {
+    &.stroke {
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+    }
+}
 
 ul {
     list-style-type: none;
@@ -214,4 +222,11 @@ input:-webkit-autofill:active {
     textarea {
         font-size: 16px;
     }
+}
+
+
+// UTILITY CLASSES
+.rounder-bd {
+    border: 2px solid $borderColor;
+    border-radius: 30px;
 }

@@ -1,0 +1,424 @@
+.services-page {
+    header {
+        padding: 10rem 14px;
+        @include flex(center, space-between, column);
+
+        .top {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            ul {
+                list-style: disc;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+
+                li {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                font-weight: 600;
+                @include flex(flex-start, center, column);
+            }
+        }
+
+        .bottom {
+            width: 100%;
+        }
+    }
+
+    // MARQUEE
+    .marquee {
+        font-size: 3rem;
+
+        span {
+            margin: 0 1rem;
+        }
+    }
+
+    // OUR SERVICES SECTION
+    .our-services {
+        padding: 8rem 14px;
+
+        .title {
+            margin-bottom: 4rem;
+
+            h4 {
+                margin-bottom: 1rem;
+                font-weight: 400;
+                font-size: 0.7rem;
+                padding: 1rem;
+                @include flex(center, center, row);
+                display: inline-flex;
+            }
+
+            h2 {
+                font-size: 2.4rem;
+            }
+        }
+
+        .services {
+            @include grid(1, 1fr, 40px);
+
+            .service {
+                padding: 40px 20px;
+                border: 1px solid $borderColor;
+                border-radius: 10px;
+
+                .icon {
+                    border: 2px solid red;
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 2rem;
+                }
+
+                .service-title {
+                    font-size: 1.3rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    // SUBSIDIARIES SECTION
+    .subsidiaries {
+        overflow: hidden;
+
+        .wrapper {
+            height: 100vh;
+            width: 400vw;
+            @include flex(center, flex-start, row);
+            position: relative;
+
+            .sub {
+                @include flex(flex-start, space-between, column);
+                height: 100vh;
+                width: 100vw;
+
+                .img {
+                    width: 100%;
+                    height: 40%;
+                }
+
+                .text {
+                    width: 100%;
+                    height: 60%;
+                    @include flex(flex-start, center, column);
+                    padding: 0 14px;
+
+                    h5 {
+                        margin-bottom: 0.5rem;
+                        font-weight: 400;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+
+                    h2 {
+                        font-size: 2.5rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        margin-bottom: 1rem;
+                        padding-left: 1rem;
+                        font-size: 14px;
+                    }
+
+                    ul {
+                        list-style-type: square;
+                        padding-left: 1rem;
+
+                        li {
+                            margin: 1rem 0;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    .services-page {
+        header {
+            padding: 10rem 24px;
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 4rem;
+        }
+
+        // OUR SERVICES SECTION
+        .our-services {
+            padding: 8rem 24px;
+        }
+
+        // SUBSIDIARIES SECTION
+        .subsidiaries {
+            .wrapper {
+                .sub {
+                    .text {
+                        padding: 0 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .services-page {
+        header {
+            padding: 10rem 40px;
+
+            .top {
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 6rem;
+        }
+
+        // OUR SERVICES SECTION
+        .our-services {
+            padding: 8rem 40px;
+
+            .services {
+                @include grid(2, 1fr, 40px);
+            }
+        }
+
+        // SUBSIDIARIES SECTION
+        .subsidiaries {
+            .wrapper {
+                height: 80vh;
+
+                .sub {
+                    margin: 0 1rem;
+
+                    .img {
+                        width: 100%;
+                        height: 50%;
+                    }
+
+                    .text {
+                        width: 100%;
+                        height: 50%;
+                        padding: 0 40px;
+
+                        h2 {
+                            font-size: 3.5rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            padding-left: 2rem;
+                        }
+
+                        ul {
+                            padding-left: 3rem;
+
+                            li {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    .services-page {
+        header {
+            padding: 10rem 60px;
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 7rem;
+        }
+
+        // OUR SERVICES SECTION
+        .our-services {
+            padding: 8rem 60px;
+        }
+
+        // SUBSIDIARIES SECTION
+        .subsidiaries {
+            .wrapper {
+                height: 90vh;
+
+                .sub {
+                    .text {
+                        padding: 0 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-desktop-up {
+    .services-page {
+        header {
+            padding: 10rem 115px;
+            @include flex(flex-start, space-between, column);
+
+            .top {
+                width: 100%;
+                margin-right: 3rem;
+                margin-bottom: 2rem;
+
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 4rem;
+                    @include flex(flex-start, center, column);
+                }
+            }
+
+            .bottom {
+                width: 40%;
+                margin: auto;
+            }
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 8rem;
+        }
+
+        // OUR SERVICES SECTION
+        .our-services {
+            padding: 8rem 115px;
+
+            .title {
+                h4 {
+                    font-size: 0.8rem;
+                }
+
+                h2 {
+                    font-size: 3.8rem;
+                }
+            }
+
+            .services {
+                @include grid(3, 1fr, 40px);
+
+                .service {
+                    padding: 60px 40px;
+
+                    .service-title {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        // SUBSIDIARIES SECTION
+        .subsidiaries {
+            .wrapper {
+                height: 100vh;
+
+                .sub {
+                    @include flex(center, space-between, row);
+                    margin: 0;
+
+                    .img {
+                        width: 45%;
+                        height: 100%;
+                    }
+
+                    .text {
+                        width: 50%;
+                        height: 100%;
+                        padding: 0 5rem;
+
+                        h5 {
+                            margin-bottom: 2rem;
+                        }
+
+                        h2 {
+                            font-size: 4rem;
+                        }
+
+                        p {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .services-page {
+        header {
+            padding: 10rem 675px;
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 9rem;
+        }
+
+        // OUR SERVICES SECTION
+        .our-services {
+            padding: 8rem 675px;
+        }
+
+        // SUBSIDIARIES SECTION
+        .subsidiaries {
+            .wrapper {
+                .sub {
+                    .text {
+                        padding: 0 115px;
+
+                        h5 {
+                            font-size: 1.5rem;
+                        }
+
+                        h2 {
+                            font-size: 4.5rem;
+                        }
+
+                        p {
+                            font-size: 2rem;
+                        }
+
+                        ul {
+                            li {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
