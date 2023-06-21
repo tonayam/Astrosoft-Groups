@@ -1,0 +1,295 @@
+.about-page {
+    header {
+        padding: 10rem 14px;
+        @include flex(center, space-between, column);
+
+        .top {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            ul {
+                list-style: disc;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+
+                li {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                font-weight: 600;
+                @include flex(flex-start, center, column);
+            }
+        }
+
+        .bottom {
+            width: 100%;
+        }
+    }
+
+    // MARQUEE
+    .marquee {
+        font-size: 3rem;
+
+        span {
+            margin: 0 1rem;
+        }
+    }
+
+    // OUR STORY SECTION
+    .our-story {
+        padding: 8rem 15px;
+        background-color: $bgColor;
+
+        .imgs {
+            @include flex(flex-start, space-between, column);
+            margin-bottom: 4rem;
+
+            .left,
+            .right {
+                border-radius: 10px;
+                height: 100%;
+                margin-bottom: 3rem;
+
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+                margin-bottom: 0
+            }
+        }
+
+        .info {
+            @include flex(flex-start, space-between, column);
+
+            .left {
+                width: 100%;
+                margin-bottom: 2rem;
+
+                .sub-title {
+                    font-weight: 400;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+
+            .right {
+                width: 100%;
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    .about-page {
+        header {
+            padding: 10rem 24px;
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 4rem;
+        }
+
+        // OUR STORY SECTION
+        .our-story {
+            padding: 8rem 24px;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .about-page {
+        header {
+            padding: 10rem 40px;
+
+            .top {
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 6rem;
+        }
+
+        // OUR STORY SECTION
+        .our-story {
+            padding: 8rem 40px;
+
+            .imgs {
+                @include flex(center, space-between, row);
+
+                .left,
+                .right {
+                    margin-bottom: 0;
+                }
+
+                .left {
+                    width: 40%;
+                }
+
+                .right {
+                    width: 55%;
+                }
+            }
+
+            .info {
+                .right {
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    .about-page {
+        header {
+            padding: 10rem 60px;
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 7rem;
+        }
+
+        // OUR STORY SECTION
+        .our-story {
+            padding: 8rem 60px;
+        }
+    }
+}
+
+@include for-desktop-up {
+    .about-page {
+        header {
+            padding: 10rem 115px;
+            @include flex(flex-start, space-between, column);
+
+            .top {
+                width: 100%;
+                margin-right: 3rem;
+                margin-bottom: 2rem;
+
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 4rem;
+                    @include flex(flex-start, center, column);
+                }
+            }
+
+            .bottom {
+                width: 40%;
+                margin: auto;
+            }
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 8rem;
+        }
+
+        // OUR STORY SECTION
+        .our-story {
+            padding: 8rem 115px;
+
+            .imgs {
+                @include flex(center, space-between, row);
+                height: 50vh;
+                margin-bottom: 4rem;
+
+                .left,
+                .right {
+                    margin-bottom: 0;
+                }
+
+                .left {
+                    width: 40%;
+                }
+
+                .right {
+                    width: 55%;
+                }
+            }
+
+            .info {
+                @include flex(flex-start, space-between, row);
+
+                .left {
+                    width: 30%;
+                    margin-bottom: 0;
+                }
+
+                .right {
+                    width: 55%;
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .about-page {
+        header {
+            padding: 10rem 675px;
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 9rem;
+        }
+
+        // OUR STORY SECTION
+        .our-story {
+            padding: 8rem 675px;
+
+            .info {
+                .right {
+                    p {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
