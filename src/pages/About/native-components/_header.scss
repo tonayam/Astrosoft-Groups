@@ -1,0 +1,108 @@
+.about-page {
+    header {
+        padding: 10rem 14px;
+        @include flex(center, space-between, column);
+
+        .top {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            ul {
+                list-style: disc;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+
+                li {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                font-weight: 600;
+                @include flex(flex-start, center, column);
+            }
+        }
+
+        .bottom {
+            width: 100%;
+        }
+    }
+}
+
+@include for-phone-only {
+    .about-page {
+        header {
+            padding: 10rem 24px;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .about-page {
+        header {
+            padding: 10rem 40px;
+
+            .top {
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    .about-page {
+        header {
+            padding: 10rem 60px;
+        }
+    }
+}
+
+@include for-desktop-up {
+    .about-page {
+        header {
+            padding: 10rem 115px;
+            @include flex(flex-start, space-between, column);
+
+            .top {
+                width: 100%;
+                margin-right: 3rem;
+                margin-bottom: 2rem;
+
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 4rem;
+                    @include flex(flex-start, center, column);
+                }
+            }
+
+            .bottom {
+                width: 40%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .about-page {
+        header {
+            padding: 10rem 675px;
+        }
+    }
+}

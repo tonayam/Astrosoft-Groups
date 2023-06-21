@@ -6,12 +6,20 @@
 @import "../components/Navbar/navbar";
 @import "../components/Footer/footer";
 
+
 // PAGES
-@import "../pages/About/about";
 @import "../pages/Contact-us/contact-us";
 @import "../pages/Home/home";
 @import "../pages/Our-team/our-team";
 @import "../pages/Services/services";
+
+
+// STYLES NATIVE TO THE ABOUT PAGE
+@import "../pages/About/about";
+@import "../pages/About/native-components/team";
+@import "../pages/About/native-components/header";
+@import "../pages/About/native-components/our-story";
+@import "../pages/About/native-components/journey-reviews";
 
 
 

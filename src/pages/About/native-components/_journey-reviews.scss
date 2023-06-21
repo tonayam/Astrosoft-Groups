@@ -1,0 +1,299 @@
+.about-page {
+
+    // THE JOURNEY/REVIEWS SECTION
+    .journey-reviews {
+        padding: 2rem 14px;
+        @include flex(flex-start, space-between, column-reverse);
+
+        .journey {
+            width: 100%;
+            padding: 2rem 0rem;
+
+            h5 {
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                @include flex(flex-start, center, column);
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+
+                span {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+                font-size: 0.9rem
+            }
+
+            .stats {
+                @include flex(center, space-between, row);
+                margin-top: 2rem;
+
+                .stat {
+                    @include flex(flex-start, space-between, column);
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        @include flex(flex-start, center, column);
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .reviews {
+            width: 100%;
+            height: 57vh;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 3rem;
+
+            &::before,
+            &::after {
+                content: "";
+                width: 100%;
+                height: 10px;
+                position: absolute;
+                z-index: 5;
+                background-color: $subBgColor;
+                opacity: 0.7;
+            }
+
+            &::before {
+                top: 0;
+                left: 0;
+            }
+
+            &::after {
+                bottom: 0;
+                left: 0;
+            }
+
+
+            .wrapper {
+                width: 100%;
+                @include flex(center, flex-start, column);
+
+                .review {
+                    height: 50vh;
+                    width: 100%;
+                    margin: 2rem 0;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    background: #222;
+
+                    .stars {
+                        @include flex(center, flex-start, row);
+                        display: inline-flex;
+                        padding: 0.5rem;
+                        color: #c9f31d !important;
+                        margin-bottom: 1rem;
+
+                        svg {
+                            margin: 0 0.2rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 0.9rem;
+                    }
+
+                    .reviewer {
+                        margin-top: 2rem;
+                        @include flex(center, flex-start, row);
+
+                        .profile {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            @include flex(center, center, row);
+                            margin-right: 1rem;
+
+                            img {
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .info {
+                            h4 {
+                                font-size: 1.1rem;
+                                margin-bottom: 1rem;
+                            }
+
+                            h6 {
+                                font-size: 1rem;
+                                color: $greenColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    .about-page {
+
+        // THE JOURNEY/REVIEWS SECTION
+        .journey-reviews {
+            padding: 2rem 24px;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .about-page {
+
+        // THE JOURNEY/REVIEWS SECTION
+        .journey-reviews {
+            padding: 2rem 40px;
+            @include flex(flex-start, space-between, row);
+
+            .journey {
+                width: 50%;
+                padding: 3rem 0rem;
+                margin-right: 1rem;
+
+                p {
+                    font-size: 1rem
+                }
+            }
+
+            .reviews {
+                width: 50%;
+                height: 45vh;
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 3rem;
+
+                .wrapper {
+                    .review {
+                        padding: 2rem 1rem;
+
+                        p {
+                            font-size: 1rem;
+                        }
+
+                        .reviewer {
+                            margin-top: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    .about-page {
+
+        // THE JOURNEY/REVIEWS SECTION
+        .journey-reviews {
+            padding: 2rem 60px;
+        }
+    }
+}
+
+@include for-desktop-up {
+    .about-page {
+
+        // THE JOURNEY/REVIEWS SECTION
+        .journey-reviews {
+            padding: 8rem 115px !important;
+            @include flex(flex-start, space-between, row);
+
+            .journey {
+                width: 45%;
+                padding: 2rem 1rem;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1rem
+                }
+
+                .stats {
+                    .stat {
+                        @include flex(center, space-between, row);
+
+                        h3 {
+                            font-size: 3rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .reviews {
+                width: 50%;
+                height: 58vh;
+                margin-bottom: 0;
+
+                &::before,
+                &::after {
+                    height: 20px;
+                }
+
+                .wrapper {
+                    .review {
+                        padding: 1rem;
+
+                        p {
+                            font-size: 1rem;
+                        }
+
+                        .reviewer {
+                            margin-top: 2rem;
+
+                            .profile {
+                                width: 80px;
+                                height: 80px;
+                            }
+
+                            .info {
+                                h4 {
+                                    font-size: 1.2rem;
+                                }
+
+                                h6 {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .about-page {
+
+        // THE JOURNEY/REVIEWS SECTION
+        .journey-reviews {
+            padding: 8rem 675px !important;
+
+            .reviews {
+                width: 50%;
+                height: 28vh;
+                margin-bottom: 0;
+
+                .wrapper {
+                    .review {
+                        height: 20vh;
+                    }
+                }
+            }
+        }
+    }
+}
