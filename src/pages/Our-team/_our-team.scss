@@ -95,6 +95,88 @@
             }
         }
     }
+
+    // TESTIMONIALS SECTION
+    .testimonials {
+        padding: 8rem 14px;
+        margin-top: 5rem;
+        @include flex(flex-start, space-between, column);
+
+        .left {
+            width: 100%;
+            padding: 1rem 0;
+
+            h4 {
+                border: 2px solid $borderColor;
+                display: inline-flex;
+                padding: 1rem;
+                border-radius: 30px;
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: clamp(3rem, 5vw, 4rem);
+                margin-bottom: 2rem;
+            }
+        }
+
+        .right {
+            width: 100%;
+            overflow: hidden;
+
+            .testimony {
+                margin: 2rem 0;
+                padding: 2rem 1rem;
+                border-radius: 10px;
+                background: #222;
+
+                .stars {
+                    @include flex(center, flex-start, row);
+                    display: inline-flex;
+                    padding: 0.5rem;
+                    color: #c9f31d !important;
+                    margin-bottom: 1rem;
+
+                    svg {
+                        margin: 0 0.2rem;
+                    }
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+
+                .reviewer {
+                    margin-top: 2rem;
+                    @include flex(center, flex-start, row);
+
+                    .profile {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        @include flex(center, center, row);
+                        margin-right: 1rem;
+
+                        img {
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .info {
+                        h4 {
+                            font-size: 1.1rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        h6 {
+                            font-size: 1rem;
+                            color: $greenColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include for-phone-only {
@@ -110,6 +192,12 @@
 
         // TEAM MEMBERS SECTION
         .team-members {
+            padding: 8rem 24px;
+        }
+
+
+        // TESTIMONIALS SECTION
+        .testimonials {
             padding: 8rem 24px;
         }
     }
@@ -144,6 +232,13 @@
 
             @include grid(2, 1fr, 40px);
         }
+
+        // TESTIMONIALS SECTION
+        .testimonials {
+            padding: 8rem 40px;
+            margin-top: 5rem;
+            @include flex(center, space-between, row);
+        }
     }
 }
 
@@ -160,6 +255,11 @@
 
         // TEAM MEMBERS SECTION
         .team-members {
+            padding: 8rem 60px;
+        }
+
+        // TESTIMONIALS SECTION
+        .testimonials {
             padding: 8rem 60px;
         }
     }
@@ -221,6 +321,46 @@
                 }
             }
         }
+
+        // TESTIMONIALS SECTION
+        .testimonials {
+            padding: 8rem 115px;
+            @include flex(center, space-between, row);
+
+            .left {
+                width: 40%;
+            }
+
+            .right {
+                width: 60%;
+                margin-left: 1rem;
+
+                .testimony {
+                    p {
+                        font-size: 1rem;
+                    }
+
+                    .reviewer {
+                        margin-top: 2rem;
+
+                        .profile {
+                            width: 80px;
+                            height: 80px;
+                        }
+
+                        .info {
+                            h4 {
+                                font-size: 1.2rem;
+                            }
+
+                            h6 {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -237,6 +377,11 @@
 
         // TEAM MEMBERS SECTION
         .team-members {
+            padding: 8rem 675px;
+        }
+
+        // TESTIMONIALS SECTION
+        .testimonials {
             padding: 8rem 675px;
         }
     }

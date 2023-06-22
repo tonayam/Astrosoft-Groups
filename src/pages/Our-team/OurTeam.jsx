@@ -1,6 +1,10 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import { teamMembers } from '../../data/data';
+import { reviews, teamMembers } from '../../data/data';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const OurTeam = () => {
   return (
@@ -55,6 +59,60 @@ const OurTeam = () => {
             </div>
           );
         })}
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className='testimonials'>
+        <div className='left'>
+          <h4 className='sub-title'>WHAT CLIENTS SAYS?</h4>
+          <h2>Testimonials</h2>
+        </div>
+        <div className='right'>
+          <Swiper
+            slidesPerView={
+              window.innerWidth < 600 ? 1 : window.innerWidth < 1200 ? 2 : 2
+            }
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={20}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className='mySwiper members'
+          >
+            {reviews.map((review, reviewIndex) => {
+              const {
+                comment,
+                reviewerName,
+                reviewerPhoto,
+                reviewerPosition,
+                stars,
+              } = review;
+              return (
+                <SwiperSlide className={`testimony`} key={reviewIndex}>
+                  <div className='stars'>
+                    {stars.map((star, starIndex) => {
+                      return <div key={starIndex}>{star}</div>;
+                    })}
+                  </div>
+                  <p>{comment}</p>
+                  <div className='reviewer'>
+                    <div className='profile'>
+                      <img src={reviewerPhoto} alt={reviewerName} />
+                    </div>
+                    <div className='info'>
+                      <h4>{reviewerName}</h4>
+                      <h6>{reviewerPosition}</h6>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
       </section>
     </main>
   );
