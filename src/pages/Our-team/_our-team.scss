@@ -1,0 +1,243 @@
+.our-team-page {
+    header {
+        padding: 10rem 14px;
+        @include flex(center, space-between, column);
+
+        .top {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            ul {
+                list-style: disc;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+
+                li {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                font-weight: 600;
+                @include flex(flex-start, center, column);
+            }
+        }
+
+        .bottom {
+            width: 100%;
+        }
+    }
+
+    // MARQUEE
+    .big-marquee {
+        font-size: 3rem;
+        font-weight: 800;
+
+        span {
+            margin: 0 1rem;
+        }
+    }
+
+    // TEAM MEMBERS SECTION
+    .team-members {
+        padding: 8rem 14px;
+
+        @include grid(1, 1fr, 40px);
+
+        .member {
+            position: relative;
+            border-radius: 10px 10px 0 0;
+            border: 2px solid #c9f31d;
+            border-bottom: 0;
+            overflow: hidden;
+
+            .mini-marquee {
+                position: absolute;
+                background: #fff;
+                height: 40px;
+                @include flex(center, center, row);
+                overflow: hidden;
+                left: 0;
+                bottom: 0;
+
+                &.top {
+                    bottom: 30px;
+                    transform: rotate(-17deg) translateX(12px);
+                    background-color: #1d1d1d;
+
+                    .child {
+                        @include flex(center, center, row);
+
+                        span {
+                            color: #fff;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .child {
+                    @include flex(center, center, row);
+                    margin: 0 0.5rem;
+
+                    span {
+                        color: #1d1d1d;
+                        font-size: 14px;
+                    }
+                }
+
+                .marquee {
+                    height: 100%;
+                    @include flex(center, center, row);
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    .our-team-page {
+        header {
+            padding: 10rem 24px;
+        }
+
+        // MARQUEE
+        .big-marquee {
+            font-size: 4rem;
+        }
+
+        // TEAM MEMBERS SECTION
+        .team-members {
+            padding: 8rem 24px;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .our-team-page {
+        header {
+            padding: 10rem 40px;
+
+            .top {
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        // MARQUEE
+        .big-marquee {
+            font-size: 6rem;
+        }
+
+        // TEAM MEMBERS SECTION
+        .team-members {
+            padding: 8rem 40px;
+
+            @include grid(2, 1fr, 40px);
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    .our-team-page {
+        header {
+            padding: 10rem 60px;
+        }
+
+        // MARQUEE
+        .big-marquee {
+            font-size: 7rem;
+        }
+
+        // TEAM MEMBERS SECTION
+        .team-members {
+            padding: 8rem 60px;
+        }
+    }
+}
+
+@include for-desktop-up {
+    .our-team-page {
+        header {
+            padding: 10rem 115px;
+            @include flex(flex-start, space-between, column);
+
+            .top {
+                width: 100%;
+                margin-right: 3rem;
+                margin-bottom: 2rem;
+
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 4rem;
+                    @include flex(flex-start, center, column);
+                }
+            }
+
+            .bottom {
+                width: 40%;
+                margin-left: 6rem;
+            }
+        }
+
+        // MARQUEE
+        .big-marquee {
+            font-size: 10rem;
+            margin-top: 3rem;
+        }
+
+        // TEAM MEMBERS SECTION
+        .team-members {
+            margin-top: 5rem;
+            padding: 8rem 115px;
+            @include grid(3, 1fr, 40px);
+
+            .member {
+                &:hover {
+                    -webkit-filter: grayscale(0);
+                    filter: grayscale(0);
+
+                    .mini-marquee {
+                        display: flex !important;
+                    }
+                }
+
+                .mini-marquee {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .our-team-page {
+        header {
+            padding: 10rem 675px;
+        }
+
+        // MARQUEE
+        .marquee {
+            font-size: 9rem;
+        }
+
+        // TEAM MEMBERS SECTION
+        .team-members {
+            padding: 8rem 675px;
+        }
+    }
+}
