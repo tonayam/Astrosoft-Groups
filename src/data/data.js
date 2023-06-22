@@ -2,6 +2,9 @@
 import sub1 from '../assets/sub-1.jpg';
 import sub2 from '../assets/sub-2.jpg';
 import reviewer1 from '../assets/reviewer-1.jpg';
+import teamMember1 from '../assets/team-member-1.jpg';
+import teamMember2 from '../assets/team-member-2.jpg';
+import teamMember3 from '../assets/team-member-3.jpg';
 
 // ICONS
 import { BsFillStarFill } from 'react-icons/bs';
@@ -72,5 +75,36 @@ export const reviews = [
     reviewerName: `Leonardo Davinci`,
     reviewerPosition: `Customer`,
     reviewerPhoto: reviewer1,
+  },
+];
+
+export const teamMembers = [
+  {
+    memberImg: reviewer1,
+    memberName: `John Doe`,
+    memberPosition: `Co-Founder`,
+    extraClass: `short`,
+  },
+  {
+    memberImg: teamMember1,
+    memberName: `John Doe`,
+    memberPosition: `HOD Astrosoft`,
+  },
+  {
+    memberImg: teamMember2,
+    memberName: `John Doe`,
+    memberPosition: `HOD AstroPrints`,
+    extraClass: `short`,
+  },
+  {
+    memberImg: teamMember3,
+    memberName: `John Doe`,
+    memberPosition: `HOD AstroArch`,
+  },
+  {
+    memberImg: reviewer1,
+    memberName: `John Doe`,
+    memberPosition: `HOD AstroStudios`,
+    extraClass: `short`,
   },
 ];

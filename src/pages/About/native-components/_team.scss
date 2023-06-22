@@ -1,44 +1,145 @@
-.about-page {}
+.about-page {
+    .team {
+        padding: 4rem 14px 4rem 14px;
+
+        .title {
+            @include flex(center, center, row);
+            width: 80%;
+            margin: 2rem auto;
+
+            h2 {
+                font-size: clamp(5rem, 20vw, 20rem);
+            }
+        }
+
+
+        .container {
+            width: 100%;
+            height: 60vh;
+            position: relative;
+
+            .members {
+                @include flex(flex-end, flex-start, row);
+                height: 100%;
+                overflow-y: hidden;
+
+
+                .member-slide {
+                    height: 100%;
+                    @include flex(center, center, row);
+                    border-radius: 10px 10px 0 0;
+                    border: 2px solid #c9f31d;
+                    border-bottom: 0;
+                    overflow: hidden;
+                    position: relative;
+
+                    img {
+                        border-radius: 10px 10px 0 0;
+                    }
+
+                    &.short {
+                        border: none;
+
+                        img {
+                            transform: translateY(60px);
+                        }
+                    }
+
+                    .mini-marquee {
+                        position: absolute;
+                        background: #fff;
+                        height: 40px;
+                        @include flex(center, center, row);
+                        overflow: hidden;
+                        left: 0;
+                        bottom: 0;
+
+
+                        &.top {
+                            bottom: 30px;
+                            transform: rotate(-17deg) translateX(12px);
+                            background-color: #1d1d1d;
+
+                            .child {
+                                @include flex(center, center, row);
+
+                                span {
+                                    color: #fff;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .child {
+                            @include flex(center, center, row);
+
+                            span {
+                                color: #1d1d1d;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @include for-phone-only {
-    .about-page {}
+    .about-page {
+        .team {
+            padding: 4rem 24px 4rem 24px;
+        }
+    }
 }
 
 @include for-tablet-potrait-up {
-    .about-page {}
+    .about-page {
+        .team {
+            padding: 4rem 40px 4rem 40px;
+        }
+    }
 }
 
 @include for-tablet-landscape-up {
-    .about-page {}
+    .about-page {
+        .team {
+            padding: 4rem 60px 4rem 60px;
+        }
+    }
 }
 
 @include for-desktop-up {
     .about-page {
-
-        // TEAM SECTION
         .team {
-            border: 2px solid red;
             padding: 8rem 0 4rem 0;
 
-            .title {
-                @include flex(center, center, row);
-                width: 80%;
-                margin: 2rem auto;
+            .container {
+                .members {
+                    .member-slide {
+                        &:hover {
+                            -webkit-filter: grayscale(0);
+                            filter: grayscale(0);
 
-                h2 {
-                    font-size: clamp(5rem, 20vw, 20rem);
+                            .mini-marquee {
+                                display: flex !important;
+                            }
+                        }
+
+                        .mini-marquee {
+                            display: none !important;
+                        }
+                    }
                 }
-            }
-
-            .members {
-                width: 100%;
-                height: 50vh;
-                background: green;
             }
         }
     }
 }
 
 @include for-big-desktop-up {
-    .about-page {}
+    .about-page {
+        .team {
+            padding: 8rem 0 4rem 0;
+        }
+    }
 }

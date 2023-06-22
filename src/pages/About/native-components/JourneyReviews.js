@@ -19,10 +19,10 @@ const JourneyReviews = () => {
         scrollTrigger: {
           trigger: triggerRef.current,
           start: `top top`,
-          end: `1000 top`,
+          // end: `1000 top`,
           pin: true,
           scrub: 0.6,
-          anticipatePin: 1,
+          anticipatePin: 0.5,
         },
       }
     );
