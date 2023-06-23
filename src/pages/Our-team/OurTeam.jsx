@@ -70,7 +70,7 @@ const OurTeam = () => {
         <div className='right'>
           <Swiper
             slidesPerView={
-              window.innerWidth < 600 ? 1 : window.innerWidth < 1200 ? 2 : 2
+              window.innerWidth < 600 ? 1 : window.innerWidth < 1200 ? 1 : 2
             }
             autoplay={{
               delay: 3500,

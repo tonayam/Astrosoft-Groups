@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Marquee from 'react-fast-marquee';
@@ -69,10 +70,15 @@ const Team = () => {
           slidesPerView={
             window.innerWidth < 600 ? 1 : window.innerWidth < 1200 ? 2 : 4
           }
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
           spaceBetween={50}
           pagination={{
             clickable: true,
           }}
+          modules={[Autoplay, Navigation]}
           className='mySwiper members'
         >
           {teamMembers.map((teamMember, memberIndex) => {

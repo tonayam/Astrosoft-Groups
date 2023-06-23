@@ -1,0 +1,184 @@
+.home-page {
+
+    // MARQUEE
+    .home-marquee {
+        background-color: #55e6a5;
+        padding: 1rem 0;
+
+        h5 {
+            font-size: clamp(1rem, 5vw, 1.8rem);
+            @include flex(center, flex-start, row);
+            margin: 0 1rem;
+            font-weight: 500;
+
+            span {
+                @include flex(center, center, row);
+                margin-right: 1rem;
+                color: #000;
+
+                &.stroke {
+                    margin-top: 0.5rem;
+                    color: transparent;
+                    -webkit-text-stroke: 1px #1d1d1d;
+                }
+            }
+        }
+    }
+
+    // TESRTIMONIAL SECTION
+    .testimonial {
+        padding: 2rem 14px 3rem 14px;
+        margin-top: 3rem;
+        background-size: auto;
+        @include flex(flex-start, space-between, column);
+        position: relative;
+        overflow: hidden;
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: url("../../assets/dots-bg.png");
+            opacity: 0.1;
+        }
+
+        .left {
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                transform: translateY(50px);
+            }
+        }
+
+        .right {
+            width: 100%;
+            margin-top: 3rem;
+
+            .stars {
+                @include flex(center, flex-start, row);
+                display: inline-flex;
+                padding: 0.5rem;
+                color: #55e6a5;
+                margin-bottom: 1rem;
+
+                svg {
+                    margin: 0 0.2rem;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            .divider {
+                margin: 2rem 0;
+                position: relative;
+
+                .img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    position: absolute;
+                    border: 2px solid $borderColor;
+                    right: 10%;
+                    top: -30px;
+                    @include flex(center, center, row);
+                    background-color: $subBgColor;
+
+                    img {
+                        width: 50%;
+                        height: 50%;
+                    }
+
+                }
+
+            }
+
+            .ceo {
+                padding: 1rem 0;
+
+                h6 {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    .home-page {
+
+        // TESRTIMONIAL SECTION
+        .testimonial {
+            padding: 2rem 24px 3rem 24px;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .home-page {
+
+        // TESRTIMONIAL SECTION
+        .testimonial {
+            padding: 2rem 40px 3rem 40px;
+            @include flex(center, space-between, row);
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    .home-page {
+
+        // TESRTIMONIAL SECTION
+        .testimonial {
+            padding: 2rem 60px 3rem 60px;
+        }
+    }
+}
+
+@include for-desktop-up {
+    .home-page {
+
+        // TESRTIMONIAL SECTION
+        .testimonial {
+            padding: 2rem 115px 0 115px;
+            @include flex(center, space-between, row);
+
+            .left {
+                margin-right: 3rem;
+                width: 50%;
+                transform: translateY(150px);
+
+                img {
+                    transform: translateY(0);
+                }
+            }
+
+            .right {
+                width: 50%;
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .home-page {
+
+        // TESRTIMONIAL SECTION
+        .testimonial {
+            padding: 2rem 675px 0 675px;
+        }
+    }
+}
