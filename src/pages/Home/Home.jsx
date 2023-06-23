@@ -2,6 +2,7 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import ceoImg from '../../assets/ceo-img.png';
 import quote from '../../assets/quote.png';
+import clientLogo from '../../assets/client-img.png';
 import { BsFillStarFill } from 'react-icons/bs';
 
 const Home = () => {
@@ -82,6 +83,29 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* OUR REPUTATION SECTION */}
+      <section className='our-reputation'>
+        <div className='info'>
+          <h3 className='sub-title'>CHECK OUT ALL</h3>
+          <h2>Successful Our Reputation</h2>
+          <div className='past-clients'>
+            <div className='client'>
+              <img src={clientLogo} alt='client name' />
+            </div>
+            <div className='client'>
+              <img src={clientLogo} alt='client name' />
+            </div>
+            <div className='client'>
+              <img src={clientLogo} alt='client name' />
+            </div>
+            <div className='client'>
+              <img src={clientLogo} alt='client name' />
+            </div>
+          </div>
+        </div>
+        <div className='video'></div>
+      </section>
     </main>
   );
 };

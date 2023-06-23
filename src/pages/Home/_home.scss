@@ -130,6 +130,45 @@
             }
         }
     }
+
+    // OUR REPUTATON SECTION
+    .our-reputation {
+        padding: 8rem 14px;
+        margin: 1rem 0;
+        @include flex(flex-start, space-between, column);
+
+        .info {
+            width: 100%;
+
+            .sub-title {
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: clamp(1.2rem, 4vw, 2rem);
+                margin-bottom: 1rem;
+            }
+
+            .past-clients {
+                width: 100%;
+                padding: 2rem 0;
+                @include grid(2, 1fr, 20px);
+
+                .client {
+                    border: 1px solid $borderColor;
+                    padding: 2rem;
+                    @include flex(center, center, row);
+                }
+            }
+        }
+
+        .video {
+            width: 100%;
+            border: 2px solid $borderColor;
+            height: 40vh;
+        }
+
+    }
 }
 
 @include for-phone-only {
@@ -143,6 +182,11 @@
         // TESRTIMONIAL SECTION
         .testimonial {
             padding: 2rem 24px 3rem 24px;
+        }
+
+        // OUR REPUTATON SECTION
+        .our-reputation {
+            padding: 8rem 24px;
         }
     }
 }
@@ -160,11 +204,21 @@
             }
         }
 
-
         // TESRTIMONIAL SECTION
         .testimonial {
             padding: 2rem 40px 3rem 40px;
             @include flex(center, space-between, row);
+        }
+
+        // OUR REPUTATON SECTION
+        .our-reputation {
+            padding: 8rem 40px;
+
+            .info {
+                .past-clients {
+                    @include grid(3, 1fr, 20px);
+                }
+            }
         }
     }
 }
@@ -180,6 +234,11 @@
         // TESRTIMONIAL SECTION
         .testimonial {
             padding: 2rem 60px 3rem 60px;
+        }
+
+        // OUR REPUTATON SECTION
+        .our-reputation {
+            padding: 8rem 60px;
         }
     }
 }
@@ -228,6 +287,22 @@
                 }
             }
         }
+
+        // OUR REPUTATON SECTION
+        .our-reputation {
+            padding: 8rem 115px;
+            @include flex(center, space-between, row);
+
+            .info {
+                width: 55%;
+                margin-right: 1rem;
+            }
+
+            .video {
+                width: 40%;
+                height: 70vh;
+            }
+        }
     }
 }
 
@@ -242,6 +317,15 @@
         // TESRTIMONIAL SECTION
         .testimonial {
             padding: 2rem 675px 0 675px;
+        }
+
+        // OUR REPUTATON SECTION
+        .our-reputation {
+            padding: 8rem 675px;
+
+            .video {
+                height: 30vh;
+            }
         }
     }
 }
