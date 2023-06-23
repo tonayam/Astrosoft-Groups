@@ -32,7 +32,24 @@ const Home = () => {
       </Marquee>
 
       {/* COMPANY STATS */}
-      <section className='company-stats'></section>
+      <section className='company-stats'>
+        <div className='stat'>
+          <h2 className='stroke'>16</h2>
+          <p>Years of Experience</p>
+        </div>
+        <div className='stat'>
+          <h2>4k</h2>
+          <p>Projects Complated</p>
+        </div>
+        <div className='stat'>
+          <h2 className='stroke'>9k</h2>
+          <p>Happy Customers</p>
+        </div>
+        <div className='stat'>
+          <h2>12</h2>
+          <p>Awards Winning</p>
+        </div>
+      </section>
 
       {/* TESTIMONIAL SECTION */}
       <div className='testimonial'>

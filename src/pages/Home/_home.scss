@@ -25,6 +25,25 @@
         }
     }
 
+    // CONMPANY STATS
+    .company-stats {
+        padding: 8rem 14px;
+        margin: 1rem 0;
+        @include grid(1, 1fr, 40px);
+
+        .stat {
+            h2 {
+                font-size: clamp(4rem, 7vw, 6rem);
+
+                &.stroke {
+                    color: transparent;
+                    -webkit-text-stroke: 1px #fff;
+                }
+            }
+        }
+
+    }
+
     // TESRTIMONIAL SECTION
     .testimonial {
         padding: 2rem 14px 3rem 14px;
@@ -116,6 +135,11 @@
 @include for-phone-only {
     .home-page {
 
+        // CONMPANY STATS
+        .company-stats {
+            padding: 8rem 24px;
+        }
+
         // TESRTIMONIAL SECTION
         .testimonial {
             padding: 2rem 24px 3rem 24px;
@@ -125,6 +149,17 @@
 
 @include for-tablet-potrait-up {
     .home-page {
+
+        // CONMPANY STATS
+        .company-stats {
+            padding: 8rem 40px;
+            @include grid(2, 1fr, 40px);
+
+            .stat {
+                text-align: center;
+            }
+        }
+
 
         // TESRTIMONIAL SECTION
         .testimonial {
@@ -137,6 +172,11 @@
 @include for-tablet-landscape-up {
     .home-page {
 
+        // CONMPANY STATS
+        .company-stats {
+            padding: 8rem 60px;
+        }
+
         // TESRTIMONIAL SECTION
         .testimonial {
             padding: 2rem 60px 3rem 60px;
@@ -146,6 +186,24 @@
 
 @include for-desktop-up {
     .home-page {
+
+        // CONMPANY STATS
+        .company-stats {
+            padding: 8rem 115px;
+            @include grid(4, 1fr, 40px);
+
+            .stat {
+                text-align: center;
+
+                &:first-child {
+                    text-align: start;
+                }
+
+                &:last-child {
+                    text-align: end;
+                }
+            }
+        }
 
         // TESRTIMONIAL SECTION
         .testimonial {
@@ -175,6 +233,11 @@
 
 @include for-big-desktop-up {
     .home-page {
+
+        // CONMPANY STATS
+        .company-stats {
+            padding: 8rem 675px;
+        }
 
         // TESRTIMONIAL SECTION
         .testimonial {
