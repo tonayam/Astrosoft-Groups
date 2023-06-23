@@ -3,6 +3,9 @@ import Marquee from 'react-fast-marquee';
 import ceoImg from '../../assets/ceo-img.png';
 import quote from '../../assets/quote.png';
 import clientLogo from '../../assets/client-img.png';
+import value1 from '../../assets/values-1.png';
+import value2 from '../../assets/values-2.png';
+
 import { BsFillStarFill, BsArrowUpRight } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from 'swiper';
@@ -160,6 +163,53 @@ const Home = () => {
           </div>
         </div>
         <div className='video'></div>
+      </section>
+
+      {/* OUR VALUES */}
+      <section className='our-values'>
+        <div className='left'>
+          <div className='value'>
+            <div className='img'>
+              <img src={value1} alt='value 1' />
+            </div>
+            <div className='info'>
+              <h3>High Standerd</h3>
+              <p>
+                Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div className='value'>
+            <div className='img'>
+              <img src={value2} alt='value 1' />
+            </div>
+            <div className='info'>
+              <h3>Ease of Communication</h3>
+              <p>
+                Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className='right'>
+          <h4 className='sub-title'>OUR VALUE</h4>
+          <h2>
+            Watch the creative process behind our{' '}
+            <span className='stroke'>digital marketing.</span>
+          </h2>
+          <div className='skills-box'>
+            <div className='skill design'>
+              <h3>UI / UX Design</h3>
+              <div className='bar'></div>
+            </div>
+            <div className='skill dev'>
+              <h3>Apps Development</h3>
+              <div className='bar'></div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
