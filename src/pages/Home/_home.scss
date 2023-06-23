@@ -1,5 +1,83 @@
 .home-page {
 
+    // HEADER
+    header {
+        height: 100vh;
+        width: 100%;
+
+        .mySwiper4 {
+            height: 100%;
+            width: 100%;
+
+            .slide {
+                width: 100%;
+                height: 100%;
+                @include flex(center, center, column);
+                background-size: cover;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: #000;
+                    opacity: .6;
+                }
+
+                .container {
+                    width: 100%;
+                    padding: 0 14px;
+                    @include flex(center, center, column);
+                    text-align: center;
+                    z-index: 2;
+
+                    h4 {
+                        @include flex(center, center, row);
+                        margin-bottom: 1rem;
+
+                        span {
+                            font-size: 1rem;
+                            font-weight: 200;
+                            @include flex(center, center, row);
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    h1 {
+                        font-size: clamp(1.5rem, 4vw, 5rem);
+                        margin-bottom: 2rem;
+                        text-transform: capitalize;
+                    }
+
+                    a {
+                        border: 2px solid $borderColor;
+                        padding: 1rem 2rem;
+                        font-weight: 300;
+                        @include flex(center, center, row);
+                        background-color: #55e6a5;
+                        color: #212529;
+                        font-weight: 500;
+                        border-radius: 0 !important;
+                        transition: all .4s;
+
+                        svg {
+                            font-size: 1rem;
+                            margin-left: 0.5rem;
+                        }
+
+                        &:hover {
+                            background: transparent !important;
+                            border-color: #fff;
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     // MARQUEE
     .home-marquee {
         background-color: #55e6a5;
@@ -174,6 +252,17 @@
 @include for-phone-only {
     .home-page {
 
+        // HEADER
+        header {
+            .mySwiper4 {
+                .slide {
+                    .container {
+                        padding: 0 24px;
+                    }
+                }
+            }
+        }
+
         // CONMPANY STATS
         .company-stats {
             padding: 8rem 24px;
@@ -193,6 +282,18 @@
 
 @include for-tablet-potrait-up {
     .home-page {
+
+        // HEADER
+        header {
+            .mySwiper4 {
+                .slide {
+                    .container {
+                        width: 70%;
+                        padding: 0 auto;
+                    }
+                }
+            }
+        }
 
         // CONMPANY STATS
         .company-stats {
@@ -226,6 +327,19 @@
 @include for-tablet-landscape-up {
     .home-page {
 
+        // HEADER
+        header {
+            .mySwiper4 {
+                .slide {
+                    .container {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+
+
+
         // CONMPANY STATS
         .company-stats {
             padding: 8rem 60px;
@@ -245,6 +359,25 @@
 
 @include for-desktop-up {
     .home-page {
+
+        // HEADER
+        header {
+            .mySwiper4 {
+                .slide {
+                    .container {
+                        width: 60%;
+                        margin: 0 auto;
+                        padding: 0;
+
+                        h4 {
+                            span {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         // CONMPANY STATS
         .company-stats {
@@ -308,6 +441,23 @@
 
 @include for-big-desktop-up {
     .home-page {
+
+        // HEADER
+        header {
+            .mySwiper4 {
+                .slide {
+                    .container {
+                        width: 50%;
+
+                        h4 {
+                            span {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         // CONMPANY STATS
         .company-stats {

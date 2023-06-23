@@ -1,8 +1,16 @@
 .navbar {
     @include flex(center, space-between, row);
     padding: 0.8rem 14px;
-    background: $bgColor;
     color: $defaultTextColor;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    transition: linear background-color 0.3s;
+
+    &.bg {
+        background-color: $bgColor;
+    }
 
     .links {
         @include flex(flex-start, flex-start, column);
@@ -17,11 +25,13 @@
         opacity: 0;
         transition: 0.3s linear all;
         transform: translateY(10px);
+        pointer-events: none;
 
         &.show {
             z-index: 10;
             opacity: 1;
             transform: translateY(0);
+            pointer-events: all;
         }
 
         li {
@@ -128,6 +138,7 @@
             transform: translateY(0);
             padding: 0.8rem 0;
             width: auto;
+            background-color: transparent;
 
             li {
                 margin: 0 1.5rem;

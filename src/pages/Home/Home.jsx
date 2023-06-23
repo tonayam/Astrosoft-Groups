@@ -3,11 +3,66 @@ import Marquee from 'react-fast-marquee';
 import ceoImg from '../../assets/ceo-img.png';
 import quote from '../../assets/quote.png';
 import clientLogo from '../../assets/client-img.png';
-import { BsFillStarFill } from 'react-icons/bs';
+import { BsFillStarFill, BsArrowUpRight } from 'react-icons/bs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectCreative } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-creative';
+import { homeHeaderSlides } from '../../data/data';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <main className='home-page'>
+      <header>
+        <Swiper
+          grabCursor={true}
+          effect={'creative'}
+          loop={true}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          creativeEffect={{
+            prev: {
+              shadow: true,
+              translate: ['-20%', 0, -1],
+            },
+            next: {
+              translate: ['100%', 0, 0],
+            },
+          }}
+          modules={[EffectCreative, Autoplay]}
+          className='mySwiper4'
+        >
+          {homeHeaderSlides.map((slide, slideIndex) => {
+            const { btnLabel, btnLink, mainTitle, slideBg, subTitle } = slide;
+            return (
+              <SwiperSlide
+                className='slide'
+                style={{ backgroundImage: `url(${slideBg})` }}
+                key={slideIndex}
+              >
+                <div className='container'>
+                  <h4>
+                    <span>
+                      <BsArrowUpRight />
+                    </span>
+                    <span className='sub-title'>{subTitle}</span>
+                  </h4>
+                  <h1>{mainTitle}</h1>
+                  <Link to={btnLink}>
+                    {btnLabel} <BsArrowUpRight />
+                  </Link>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </header>
+
       {/* MARQUEE */}
       <Marquee className='home-marquee'>
         <h5>

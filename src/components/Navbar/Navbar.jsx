@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context/context';
 
 const Navbar = () => {
   const { showNav, setShowNav } = useGlobalContext();
+  const [scrollHeight, setScrollHeight] = useState(0);
+
+  useEffect(() => {
+    const scroll = window.addEventListener(`scroll`, () =>
+      setScrollHeight(window.scrollY)
+    );
+
+    return () => window.removeEventListener(`scroll`, scroll);
+  });
 
   const closeNav = () => {
     setShowNav(false);
   };
 
   return (
-    <nav className='navbar'>
+    <nav className={`navbar ${scrollHeight > 200 ? `bg` : null}`}>
       <div className='logo'></div>
       <ul className={`links ${showNav ? `show` : null}`}>
         <li onClick={closeNav}>

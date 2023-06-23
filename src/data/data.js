@@ -5,6 +5,9 @@ import reviewer1 from '../assets/reviewer-1.jpg';
 import teamMember1 from '../assets/team-member-1.jpg';
 import teamMember2 from '../assets/team-member-2.jpg';
 import teamMember3 from '../assets/team-member-3.jpg';
+import homeHeaderSlide1 from '../assets/home-header-slide-bg-1.jpg';
+import homeHeaderSlide2 from '../assets/home-header-slide-bg-2.jpg';
+import homeHeaderSlide3 from '../assets/home-header-slide-bg-3.jpg';
 
 // ICONS
 import { BsFillStarFill } from 'react-icons/bs';
@@ -106,5 +109,29 @@ export const teamMembers = [
     memberName: `John Doe`,
     memberPosition: `HOD AstroStudios`,
     extraClass: `short`,
+  },
+];
+
+export const homeHeaderSlides = [
+  {
+    slideBg: homeHeaderSlide1,
+    subTitle: `creative agency`,
+    mainTitle: `Providing Best Digital Solutions & Grow Business.`,
+    btnLabel: `Get Solutions`,
+    btnLink: `/`,
+  },
+  {
+    slideBg: homeHeaderSlide2,
+    subTitle: `Engineering Consultancy`,
+    mainTitle: `Providing The Best Engineering Solutions For Your Business.`,
+    btnLabel: `Get Solutions`,
+    btnLink: `/`,
+  },
+  {
+    slideBg: homeHeaderSlide3,
+    subTitle: `World class Printing Press`,
+    mainTitle: `Providing Industry standard printing services`,
+    btnLabel: `Get Solutions`,
+    btnLink: `/`,
   },
 ];
