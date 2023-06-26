@@ -6,9 +6,19 @@ import { Footer, MiniFooter } from './components/Footer/Footer.jsx';
 
 // PAGES WITHOUT AUTH
 import { About, ContactUs, Home, OurTeam, Services } from './pages';
+import { useGlobalContext } from './context/context.jsx';
 
 function App() {
   const { pathname } = useLocation();
+  const { showNav } = useGlobalContext();
+
+  useEffect(() => {
+    if (showNav) {
+      document.body.style.overflow = `hidden`;
+    } else {
+      document.body.style.overflow = `auto`;
+    }
+  }, [showNav]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
