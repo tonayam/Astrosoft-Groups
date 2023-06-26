@@ -41,50 +41,6 @@
         }
     }
 
-    // OUR SERVICES SECTION
-    .our-services {
-        padding: 8rem 14px;
-
-        .title {
-            margin-bottom: 4rem;
-
-            h4 {
-                margin-bottom: 1rem;
-                font-weight: 400;
-                font-size: 0.7rem;
-                padding: 1rem;
-                @include flex(center, center, row);
-                display: inline-flex;
-            }
-
-            h2 {
-                font-size: 2.4rem;
-            }
-        }
-
-        .services {
-            @include grid(1, 1fr, 40px);
-
-            .service {
-                padding: 40px 20px;
-                border: 1px solid $borderColor;
-                border-radius: 10px;
-
-                .icon {
-                    border: 2px solid red;
-                    width: 60px;
-                    height: 60px;
-                    margin-bottom: 2rem;
-                }
-
-                .service-title {
-                    font-size: 1.3rem;
-                    margin-bottom: 2rem;
-                }
-            }
-        }
-    }
-
     // SUBSIDIARIES SECTION
     .subsidiaries {
         overflow: hidden;
@@ -156,11 +112,6 @@
             font-size: 4rem;
         }
 
-        // OUR SERVICES SECTION
-        .our-services {
-            padding: 8rem 24px;
-        }
-
         // SUBSIDIARIES SECTION
         .subsidiaries {
             .wrapper {
@@ -195,15 +146,6 @@
         // MARQUEE
         .marquee {
             font-size: 6rem;
-        }
-
-        // OUR SERVICES SECTION
-        .our-services {
-            padding: 8rem 40px;
-
-            .services {
-                @include grid(2, 1fr, 40px);
-            }
         }
 
         // SUBSIDIARIES SECTION
@@ -260,11 +202,6 @@
             font-size: 7rem;
         }
 
-        // OUR SERVICES SECTION
-        .our-services {
-            padding: 8rem 60px;
-        }
-
         // SUBSIDIARIES SECTION
         .subsidiaries {
             .wrapper {
@@ -314,33 +251,6 @@
             font-size: 8rem;
         }
 
-        // OUR SERVICES SECTION
-        .our-services {
-            padding: 8rem 115px;
-
-            .title {
-                h4 {
-                    font-size: 0.8rem;
-                }
-
-                h2 {
-                    font-size: 3.8rem;
-                }
-            }
-
-            .services {
-                @include grid(3, 1fr, 40px);
-
-                .service {
-                    padding: 60px 40px;
-
-                    .service-title {
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-        }
-
         // SUBSIDIARIES SECTION
         .subsidiaries {
             .wrapper {
@@ -387,11 +297,6 @@
         // MARQUEE
         .marquee {
             font-size: 9rem;
-        }
-
-        // OUR SERVICES SECTION
-        .our-services {
-            padding: 8rem 675px;
         }
 
         // SUBSIDIARIES SECTION

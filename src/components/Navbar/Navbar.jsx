@@ -19,9 +19,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${scrollHeight > 200 ? `bg` : null}`}>
+    <nav className={`navbar ${scrollHeight > 200 ? `bg` : ``}`}>
       <div className='logo'></div>
-      <ul className={`links ${showNav ? `show` : null}`}>
+      <ul className={`links ${showNav ? `show` : ``}`}>
         <li onClick={closeNav}>
           <Link to='/'>Home</Link>
         </li>

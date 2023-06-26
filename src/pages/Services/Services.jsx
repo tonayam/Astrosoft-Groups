@@ -3,6 +3,7 @@ import Marquee from 'react-fast-marquee';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { subsidiaries } from '../../data/data';
+import OurServices from '../../components/Our-Services/OurServices';
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
@@ -60,35 +61,7 @@ const Services = () => {
       </Marquee>
 
       {/* OUR SERVICES SECTION */}
-      <section className='our-services'>
-        <div className='title'>
-          <h4 className='rounder-bd'>FEATURED SERVICES</h4>
-          <h2>Our Services</h2>
-        </div>
-        <div className='services'>
-          <div className='service'>
-            <div className='icon'></div>
-            <h4 className='service-title'>Brand Strategy & Art Direction</h4>
-            <p>
-              Creating a higher spacing and how people move through a unique.
-            </p>
-          </div>
-          <div className='service'>
-            <div className='icon'></div>
-            <h4 className='service-title'>Brand Strategy & Art Direction</h4>
-            <p>
-              Creating a higher spacing and how people move through a unique.
-            </p>
-          </div>
-          <div className='service'>
-            <div className='icon'></div>
-            <h4 className='service-title'>Brand Strategy & Art Direction</h4>
-            <p>
-              Creating a higher spacing and how people move through a unique.
-            </p>
-          </div>
-        </div>
-      </section>
+      <OurServices />
 
       {/* SUBSIDIARIES SECTION */}
       <div ref={triggerRef} className='subsidiaries'>

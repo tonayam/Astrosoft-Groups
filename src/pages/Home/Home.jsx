@@ -15,6 +15,7 @@ import 'swiper/css';
 import 'swiper/css/effect-creative';
 import { homeHeaderSlides } from '../../data/data';
 import { Link } from 'react-router-dom';
+import OurServices from '../../components/Our-Services/OurServices';
 
 const Home = () => {
   return (
@@ -65,6 +66,9 @@ const Home = () => {
           })}
         </Swiper>
       </header>
+
+      {/* OUR SERVICES SECTION */}
+      <OurServices />
 
       {/* MARQUEE */}
       <Marquee className='home-marquee'>
