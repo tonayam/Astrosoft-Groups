@@ -20,7 +20,9 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrollHeight > 200 ? `bg` : ``}`}>
-      <div className='logo'></div>
+      <Link to='/' className='logo'>
+        AstroSoft Groups
+      </Link>
       <ul className={`links ${showNav ? `show` : ``}`}>
         <li onClick={closeNav}>
           <Link to='/'>Home</Link>
